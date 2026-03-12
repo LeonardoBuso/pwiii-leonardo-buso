@@ -248,3 +248,252 @@ php artisan migrate`
 > `git add .`
 > `git commit- m "Your message"`
 > `git push`
+
+<br><br>
+
+# Documentação – Tutorial React (Jogo da Velha)
+
+## 1. Introdução
+
+Este documento explica o funcionamento do projeto desenvolvido no tutorial oficial do React: o jogo da velha (Tic‑Tac‑Toe). O objetivo do tutorial é ensinar os principais conceitos do React, como componentes, estado (state), propriedades (props) e atualização dinâmica da interface.
+
+---
+
+# 2. Tecnologias Utilizadas
+
+* **React** – biblioteca JavaScript para criação de interfaces
+* **JavaScript (ES6+)**
+* **Node.js** – ambiente de execução
+* **npm** – gerenciador de pacotes
+* **HTML e CSS**
+
+---
+
+# 3. Estrutura do Projeto
+
+Após criar o projeto, a estrutura principal fica semelhante a:
+
+```
+projeto-react/
+│
+├── node_modules/
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   ├── App.css
+│   └── index.css
+│
+├── package.json
+└── package-lock.json
+```
+
+## Descrição das Pastas
+
+### node_modules
+
+Contém todas as bibliotecas instaladas pelo npm. Essa pasta não deve ser enviada para o Git.
+
+### public
+
+Contém arquivos públicos, como o HTML base da aplicação.
+
+### src
+
+Contém o código principal da aplicação React.
+
+---
+
+# 4. Inicialização do Projeto
+
+Para executar o projeto localmente:
+
+### 1. Instalar dependências
+
+```
+npm install
+```
+
+### 2. Executar o servidor de desenvolvimento
+
+```
+npm start
+```
+
+Após executar o comando, o navegador abrirá normalmente em:
+
+```
+http://localhost:3000
+```
+
+Sempre que um arquivo do projeto for salvo, o navegador atualiza automaticamente.
+
+---
+
+# 5. Funcionamento do React
+
+O React funciona baseado em **componentes**.
+
+Componentes são partes reutilizáveis da interface.
+
+Exemplo simples de componente:
+
+```javascript
+function App() {
+  return (
+    <h1>Hello React</h1>
+  );
+}
+
+export default App;
+```
+
+---
+
+# 6. Componentes do Jogo da Velha
+
+O projeto é dividido em três componentes principais.
+
+## Square (Casa do tabuleiro)
+
+Representa cada quadrado do jogo.
+
+Responsável por:
+
+* Mostrar "X" ou "O"
+* Detectar cliques
+
+Exemplo simplificado:
+
+```javascript
+function Square({ value, onClick }) {
+  return (
+    <button className="square" onClick={onClick}>
+      {value}
+    </button>
+  );
+}
+```
+
+---
+
+## Board (Tabuleiro)
+
+Responsável por organizar os quadrados em um grid 3x3.
+
+Ele controla o estado das casas do jogo.
+
+Exemplo de estado do tabuleiro:
+
+```javascript
+const [squares, setSquares] = useState(Array(9).fill(null));
+```
+
+Isso cria um vetor com 9 posições representando cada casa do jogo.
+
+---
+
+## Game (Jogo)
+
+Controla a lógica geral:
+
+* turno dos jogadores
+* histórico de jogadas
+* vencedor
+
+---
+
+# 7. Manipulação de Estado
+
+React usa **state** para armazenar dados que mudam.
+
+Exemplo:
+
+```javascript
+const [xIsNext, setXIsNext] = useState(true);
+```
+
+Isso indica de quem é o próximo turno.
+
+---
+
+# 8. Atualização da Interface
+
+Quando o estado muda, o React atualiza automaticamente a interface.
+
+Exemplo:
+
+```javascript
+setSquares(nextSquares);
+```
+
+Após executar esse comando, o React renderiza novamente o componente.
+
+---
+
+# 9. Função de Verificação de Vitória
+
+O jogo precisa verificar se algum jogador venceu.
+
+Isso é feito analisando todas as combinações possíveis.
+
+Exemplo:
+
+```javascript
+function calculateWinner(squares) {
+  const lines = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+  ];
+
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
+  }
+
+  return null;
+}
+```
+
+Essa função retorna o vencedor quando três posições iguais são encontradas.
+
+---
+
+# 10. Atualização Automática (Hot Reload)
+
+Durante o desenvolvimento, qualquer alteração salva nos arquivos atualiza automaticamente o navegador.
+
+Isso acelera muito o processo de desenvolvimento.
+
+---
+
+# 11. Versionamento com Git
+
+Arquivos que devem ser enviados para o repositório:
+
+```
+src/
+public/
+package.json
+package-lock.json
+.gitignore
+```
+
+Arquivos que **não devem ser enviados**:
+
+```
+node_modules/
+```
+
+---
