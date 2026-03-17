@@ -136,6 +136,8 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
   
 
 composer global require laravel/installer
+or
+composer create-project laravel/laravel minha-app
 
   
 
