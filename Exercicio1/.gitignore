@@ -4,3 +4,4 @@ jspm_packages/
 
 # Arquivos
 .env
+package-lock.json
