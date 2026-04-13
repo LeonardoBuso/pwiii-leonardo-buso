@@ -1,0 +1,4 @@
+1. trocar a versão do react-script para 1.0.0
+2. trocar a versão do node para 18
+3. trocar a linha 34 de <> para <div> e fechar com </div>
+4. importar react usando import React from 'react'; no app.js e no index.js

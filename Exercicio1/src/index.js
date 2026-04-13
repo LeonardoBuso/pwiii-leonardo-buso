@@ -1,3 +1,4 @@
+import React from 'react';
 import { StrictMode } from "react"; // react
 import { createRoot } from "react-dom/client"; // Biblioteca do React para comunicação com navegadores web (React DOM)  
 import "./styles.css";

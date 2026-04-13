@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 
 function Square({ value, onSquareClick }) {
@@ -31,7 +32,7 @@ function Board({ xIsNext, squares, onPlay }) {
   }
 
   return (
-    <>
+    <div>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -48,7 +49,7 @@ function Board({ xIsNext, squares, onPlay }) {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+    </div>
   );
 }
 
