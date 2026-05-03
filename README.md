@@ -330,11 +330,4 @@ Baixe o **Laravel Herd** na documentação oficial.
 
 ---
 
-# 💡 Dica Final
-
-👉 Pratique criando projetos pequenos (CRUD, API, jogos simples).
-👉 Isso acelera MUITO seu aprendizado.
-
----
-
 🔥 **Bons estudos e bom código!**
