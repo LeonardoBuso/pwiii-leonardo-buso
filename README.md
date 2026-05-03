@@ -1,501 +1,340 @@
+# 🚀 pwIII - Leonardo Buso
 
-# pwIII-leonardo-buso
+### 📚 Programação Web III – Prof. João Siles
 
-Programação Web III por Prof João Siles
+---
 
-  
+# 👋 Welcome!
 
-# Creating a Laravel Framework
+Olá! Eu sou **Leonardo Buso de Souza** e neste repositório você vai aprender, de forma **simples e prática**, como:
 
-  
+✅ Criar um projeto com **Laravel**
+✅ Configurar ambiente de desenvolvimento
+✅ Trabalhar com **React (Jogo da Velha)**
+✅ Organizar e versionar projetos com **Git**
 
-  
+---
 
-Welcome to my Git Hub!👋
+# 🧰 1. Pré-requisitos
 
-  
+Antes de começar, você precisa ter instalado:
 
-Hi! I'm Leonardo Buso de Souza and I'm going to teach you how create a Laravel Framework!
+* 🐘 PHP
+* 📦 Composer
+* ⚡ Laravel Installer
+* 🟢 Node.js + NPM
+* 🖥️ XAMPP (recomendado)
 
-  
+---
 
-  
+# 💻 2. Configuração com Git Bash
 
-## What you need?
+### 📂 Passo a passo:
 
-  
+1. Abra a pasta:
 
-  
+```
+xampp → htdocs
+```
 
-- PHP
+2. Clique com o botão direito → **Git Bash Here**
 
-  
+---
 
-- Composer
+### 🔐 Configurar Git (primeira vez)
 
-  
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email seuemail@email.com
+```
 
-- Laravel installer
+---
 
-  
+### 📥 Clonar repositório
 
-- Node and NPM
+```bash
+git clone URL_DO_SEU_REPOSITORIO
+cd nome-da-pasta
+```
 
-  
+---
 
-- List item
+# ⚙️ 3. Instalação do PHP (Automática)
 
-  
+Abra o **PowerShell como Administrador** e execute:
 
-  
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; `
+[System.Net.ServicePointManager]::SecurityProtocol = `
+[System.Net.ServicePointManager]::SecurityProtocol -bor 3072; `
+iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
+```
 
-## Use the Git Bash
+---
 
-  
+# 🔧 4. Instalar Laravel
 
-  
+### ✔️ Opção 1 (Global)
 
-1. Open the xampp folder
-
-  
-
-2. Open the htdocs folder
-
-  
-
-3. Open the Git Bash
-
-  
-
-4. Log in with your name
-
-  
-
-`Enter this code: git config --global user.name "Your-name"`
-
-  
-
-5. Log in with your email
-
-  
-
-`Enter this code: git config --global user.email Your-email`
-
-  
-
-6. Clone your git repository
-
-  
-
-`Enter this code: git clone (Your git url)`
-
-  
-
-7. Open your folder with this code
-
-  
-
-`cd your-folder`
-
-  
-
-## How to install these components
-
-  
-
-  
-
-> Open the Windows PowerShell how administrator
-
-  
-
-  
-
-Enter this code
-
-  
-
-  
-
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'))
-
-  
-
-  
-
-## Laravel Installer
-
-  
-
-  
-
-> Enter this code
-
-  
-
-  
-
+```bash
 composer global require laravel/installer
-or
+```
+
+### ✔️ Opção 2 (Direto no projeto)
+
+```bash
 composer create-project laravel/laravel minha-app
-
-  
-
-  
-
-## Create the App
-
-  
-
-  
-
-1. Close the Windows PowerShell
-
-  
-
-2. Open the terminal in your project
-
-  
-
-> Use these codes
-
-  
-
-> `cd --`
-
-  
-
-> `cd --`
-
-  
-
-> `cd C:`
-
-  
-
-> `cd xampp`
-
-  
-
-> `cd htdocs`
-
-  
-
-> `cd your repository`
-
-  
-
-  
-
-3. Create the project
-
-  
-
-`Enter this code: laravel new example-app`
-
-  
-
-## Configuration
-
-  
-
-1. Close the terminal
-
-2. Open the Windows PowerShell
-
-  
-
-> Enter this code to install al the files by creating the vendor folder
-
-> `composer install`
-
-> Enter this code to generate the files that are dependencies of Js
-
-> `npm install`
-
-> Enter this code to take the files from npm install and generate executables from them
-
-> `npm run build`
-
-  
-
-3. Go to the Visual Studio Code copy and paste the file .env.example
-
-4. Rename the file to .env
-
-5. Go to the Windows PowerShell again
-
-> Enter this code to help execute
-
-> `php artisan`
-
-> Enter this code to create a key
-
-> `php artisan key:generate`
-
-> Entre this code to run all the database files
-
-> `
-php artisan migrate`
-
-> Write 'Yes'
-
-## Save the project
-
- 1. Close all
- 2. Go to Git Bash
-
-> Enter with these codes
-> `cd your-repository`
-> `git add .`
-> `git commit- m "Your message"`
-> `git push`
-
-<br><br>
-
-# Documentação – Tutorial React (Jogo da Velha)
-
-## 1. Introdução
-
-Este documento explica o funcionamento do projeto desenvolvido no tutorial oficial do React: o jogo da velha (Tic‑Tac‑Toe). O objetivo do tutorial é ensinar os principais conceitos do React, como componentes, estado (state), propriedades (props) e atualização dinâmica da interface.
+```
 
 ---
 
-# 2. Tecnologias Utilizadas
+# 🏗️ 5. Criar Projeto Laravel
 
-* **React** – biblioteca JavaScript para criação de interfaces
-* **JavaScript (ES6+)**
-* **Node.js** – ambiente de execução
-* **npm** – gerenciador de pacotes
-* **HTML e CSS**
+Dentro da pasta `htdocs`:
+
+```bash
+laravel new exemplo-app
+```
 
 ---
 
-# 3. Estrutura do Projeto
+# 🔄 6. Configuração do Projeto
 
-Após criar o projeto, a estrutura principal fica semelhante a:
+### 📦 Instalar dependências
+
+```bash
+composer install
+npm install
+npm run build
+```
+
+---
+
+### 🔑 Configurar ambiente
+
+1. Copie o arquivo:
+
+```
+.env.example → .env
+```
+
+2. Gere a chave da aplicação:
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### 🗄️ Banco de dados
+
+```bash
+php artisan migrate
+```
+
+Digite `yes` quando solicitado.
+
+---
+
+# ▶️ 7. Rodar o Projeto
+
+```bash
+php artisan serve
+```
+
+Acesse no navegador:
+
+```
+http://localhost:8000
+```
+
+---
+
+# 💾 8. Salvar no Git
+
+```bash
+git add .
+git commit -m "Sua mensagem"
+git push
+```
+
+---
+
+---
+
+# ⚛️ Documentação – React (Jogo da Velha)
+
+## 🎯 Objetivo
+
+Aprender conceitos fundamentais do React:
+
+* Componentes 🧩
+* Estado (state) 🔄
+* Props 📦
+* Renderização dinâmica ⚡
+
+---
+
+# 🧱 Estrutura do Projeto
 
 ```
 projeto-react/
-│
 ├── node_modules/
 ├── public/
-│   └── index.html
-│
 ├── src/
-│   ├── App.js
-│   ├── index.js
-│   ├── App.css
-│   └── index.css
-│
 ├── package.json
-└── package-lock.json
 ```
-
-## Descrição das Pastas
-
-### node_modules
-
-Contém todas as bibliotecas instaladas pelo npm. Essa pasta não deve ser enviada para o Git.
-
-### public
-
-Contém arquivos públicos, como o HTML base da aplicação.
-
-### src
-
-Contém o código principal da aplicação React.
 
 ---
 
-# 4. Inicialização do Projeto
+# ▶️ Executar Projeto
 
-Para executar o projeto localmente:
-
-### 1. Instalar dependências
-
-```
+```bash
 npm install
-```
-
-### 2. Executar o servidor de desenvolvimento
-
-```
 npm start
 ```
 
-Após executar o comando, o navegador abrirá normalmente em:
+Abra:
 
 ```
 http://localhost:3000
 ```
 
-Sempre que um arquivo do projeto for salvo, o navegador atualiza automaticamente.
-
 ---
 
-# 5. Funcionamento do React
+# 🧠 Conceitos Principais
 
-O React funciona baseado em **componentes**.
-
-Componentes são partes reutilizáveis da interface.
-
-Exemplo simples de componente:
+## 🔹 Componente
 
 ```javascript
 function App() {
-  return (
-    <h1>Hello React</h1>
-  );
-}
-
-export default App;
-```
-
----
-
-# 6. Componentes do Jogo da Velha
-
-O projeto é dividido em três componentes principais.
-
-## Square (Casa do tabuleiro)
-
-Representa cada quadrado do jogo.
-
-Responsável por:
-
-* Mostrar "X" ou "O"
-* Detectar cliques
-
-Exemplo simplificado:
-
-```javascript
-function Square({ value, onClick }) {
-  return (
-    <button className="square" onClick={onClick}>
-      {value}
-    </button>
-  );
+  return <h1>Hello React</h1>;
 }
 ```
 
 ---
 
-## Board (Tabuleiro)
-
-Responsável por organizar os quadrados em um grid 3x3.
-
-Ele controla o estado das casas do jogo.
-
-Exemplo de estado do tabuleiro:
-
-```javascript
-const [squares, setSquares] = useState(Array(9).fill(null));
-```
-
-Isso cria um vetor com 9 posições representando cada casa do jogo.
-
----
-
-## Game (Jogo)
-
-Controla a lógica geral:
-
-* turno dos jogadores
-* histórico de jogadas
-* vencedor
-
----
-
-# 7. Manipulação de Estado
-
-React usa **state** para armazenar dados que mudam.
-
-Exemplo:
+## 🔹 State
 
 ```javascript
 const [xIsNext, setXIsNext] = useState(true);
 ```
 
-Isso indica de quem é o próximo turno.
-
 ---
 
-# 8. Atualização da Interface
-
-Quando o estado muda, o React atualiza automaticamente a interface.
-
-Exemplo:
+## 🔹 Atualização automática
 
 ```javascript
-setSquares(nextSquares);
+setSquares(novoValor);
 ```
-
-Após executar esse comando, o React renderiza novamente o componente.
 
 ---
 
-# 9. Função de Verificação de Vitória
+# 🎮 Estrutura do Jogo
 
-O jogo precisa verificar se algum jogador venceu.
+### 🟦 Square
 
-Isso é feito analisando todas as combinações possíveis.
+* Representa cada botão
 
-Exemplo:
+### 🧩 Board
+
+* Controla o tabuleiro
+
+### 🎯 Game
+
+* Controla regras e vencedor
+
+---
+
+# 🏆 Verificar vencedor
 
 ```javascript
 function calculateWinner(squares) {
   const lines = [
-    [0,1,2],
-    [3,4,5],
-    [6,7,8],
-    [0,3,6],
-    [1,4,7],
-    [2,5,8],
-    [0,4,8],
-    [2,4,6]
+    [0,1,2], [3,4,5], [6,7,8],
+    [0,3,6], [1,4,7], [2,5,8],
+    [0,4,8], [2,4,6]
   ];
 
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-
+  for (let [a,b,c] of lines) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
   }
-
   return null;
 }
 ```
 
-Essa função retorna o vencedor quando três posições iguais são encontradas.
-
 ---
 
-# 10. Atualização Automática (Hot Reload)
+# 📦 Versionamento
 
-Durante o desenvolvimento, qualquer alteração salva nos arquivos atualiza automaticamente o navegador.
-
-Isso acelera muito o processo de desenvolvimento.
-
----
-
-# 11. Versionamento com Git
-
-Arquivos que devem ser enviados para o repositório:
+### ✅ Enviar:
 
 ```
 src/
 public/
 package.json
-package-lock.json
-.gitignore
 ```
 
-Arquivos que **não devem ser enviados**:
+### ❌ NÃO enviar:
 
 ```
 node_modules/
 ```
 
 ---
+
+---
+
+# 🐘 Documentação – Laravel Herd
+
+## ⬇️ 1. Download
+
+Baixe o **Laravel Herd** na documentação oficial.
+
+---
+
+## ⚙️ 2. Configuração
+
+### 📁 Diretório:
+
+```
+%USERPROFILE%\.config\herd
+```
+
+---
+
+### ▶️ Inicialização
+
+* Abra o **Herd Dashboard**
+* Escolha a versão do PHP
+* Inicie os serviços
+
+---
+
+## ⚠️ Observações
+
+* Verifique requisitos do sistema
+* Reinicie o Herd em caso de erro
+
+---
+
+# ✅ Finalização
+
+🎉 Pronto! Agora você tem:
+
+✔️ Ambiente Laravel configurado
+✔️ Projeto React funcional
+✔️ Versionamento com Git organizado
+
+---
+
+# 💡 Dica Final
+
+👉 Pratique criando projetos pequenos (CRUD, API, jogos simples).
+👉 Isso acelera MUITO seu aprendizado.
+
+---
+
+🔥 **Bons estudos e bom código!**
