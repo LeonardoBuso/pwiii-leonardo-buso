@@ -331,3 +331,10 @@ Baixe o **Laravel Herd** na documentação oficial.
 ---
 
 🔥 **Bons estudos e bom código!**
+
+# ⚛️ Usando Migrations no Laravel
+Crie o projeto no laravel herd
+use o comando php artisan make:migration create_<nome_da_tabela>_table
+altere os campos dentro do arquivo criado
+execute o comando php artisan migrate
+use o comando php artisan migrate:status para conferir se foi realizado com sucesso
