@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 
 class GameController extends Controller
 {
-    public function search($gameName) {
-        return "Procurando pelo jogo: " . $gameName
+    public function index()  {
+        $games = ["Zelda", "LOL", "Fortnite"];
+
+        return view('lista_games', ['games' => $games]);
+    }
+
+    public function show($id) {
+        return "Procurando pelo jogo: " . $id;
     }
 }

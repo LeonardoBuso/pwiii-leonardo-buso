@@ -7,6 +7,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/buscar/{gameName}', 
-    [GameController::class, 'search'];
-);. 
+Route::get('/games', [GameController::class, 'index']);
